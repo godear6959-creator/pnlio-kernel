@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNLIO Framework v6 - Informe de Sesión EXPLORE</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            padding: 60px 0;
+            border-bottom: 2px solid #00ff88;
+            margin-bottom: 40px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #00ff88;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        .subtitle {
+            color: #888;
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+        .meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .meta-item {
+            background: #1a1a1a;
+            padding: 15px 25px;
+            border-radius: 8px;
+            border-left: 3px solid #00ff88;
+        }
+        .meta-label { color: #666; font-size: 0.8em; text-transform: uppercase; }
+        .meta-value { color: #00ff88; font-weight: bold; }
+        
+        h2 {
+            color: #00ff88;
+            font-size: 1.8em;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333;
+        }
+        h3 { color: #00cc6a; margin: 25px 0 15px 0; }
+        
+        .metric-box {
+            background: #1a1a1a;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border-left: 4px solid;
+        }
+        .metric-box.rcr { border-color: #00ff88; }
+        .metric-box.tokens { border-color: #ffaa00; }
+        .metric-box.div { border-color: #ff55ff; }
+        .metric-box.entropy { border-color: #55aaff; }
+        
+        .metric-name { font-weight: bold; color: #fff; font-size: 1.1em; }
+        .metric-desc { color: #aaa; font-size: 0.9em; margin-top: 5px; }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th {
+            background: #00ff88;
+            color: #000;
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+        }
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #333;
+        }
+        tr:hover { background: #252525; }
+        
+        .image-section {
+            margin: 40px 0;
+        }
+        .image-container {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,255,136,0.2);
+        }
+        .image-caption {
+            color: #888;
+            font-size: 0.9em;
+            margin-top: 15px;
+            font-style: italic;
+        }
+        
+        .finding {
+            background: #1a1a1a;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border-left: 4px solid #ffaa00;
+        }
+        .finding-number {
+            color: #ffaa00;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .highlight {
+            background: rgba(0,255,136,0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #00ff88;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+            border-top: 1px solid #333;
+            color: #666;
+        }
+        .author {
+            color: #00ff88;
+            font-weight: bold;
+        }
+        
+        .hashtags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .hashtag {
+            background: #1a1a1a;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            color: #00ff88;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PNLIO Framework v6</h1>
+            <div class="subtitle">ODYSSEY IA · INFORME DE SESIÓN</div>
+            <div class="meta">
+                <div class="meta-item">
+                    <div class="meta-label">Fecha</div>
+                    <div class="meta-value">25-03-2026</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Modo</div>
+                    <div class="meta-value">EXPLORE</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Modelo</div>
+                    <div class="meta-value">Local / Ollama</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Hardware</div>
+                    <div class="meta-value">ThinkCentre i7-6700</div>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <h2>01 — Contexto</h2>
+            <p>El <strong>PNLIO Framework</strong> (Programación Neuro-Lingüística Inversa Ontológica) es un framework de investigación independiente desarrollado durante dos años por <span class="author">Gonzalo M. de la Rivera Arellano</span> desde Chillán, Chile.</p>
+            
+            <p>Su objetivo es identificar y documentar patrones de comportamiento en modelos de lenguaje, en particular los producidos por el ajuste fino RLHF (Reinforcement Learning from Human Feedback).</p>
+            
+            <p>Esta sesión fue registrada en el terminal del sistema, sobre hardware modesto: <strong>ThinkCentre All-in-One, Intel Core i7-6700, 8GB DDR4</strong>. Toda la inferencia es local, sin APIs externas.</p>
+        </section>
+
+        <section>
+            <h2>Métricas del Sistema</h2>
+            
+            <div class="metric-box rcr">
+                <div class="metric-name">RCR — Reflex Coherence Ratio</div>
+                <div class="metric-desc">Mide la coherencia interna del output. RCR alto = respuesta densa y consistente. RCR bajo = divagación. Rango: 0.0 – 1.0.</div>
+            </div>
+            
+            <div class="metric-box tokens">
+                <div class="metric-name">TOKENS — Longitud de output</div>
+                <div class="metric-desc">Cantidad de tokens generados. Permite correlacionar extensión con coherencia. Outputs largos con RCR bajo indican que el modelo "rellena" sin densidad conceptual.</div>
+            </div>
+            
+            <div class="metric-box div">
+                <div class="metric-name">DIV — Divergencia semántica</div>
+                <div class="metric-desc">Mide cuánto se aleja el output del núcleo temático del input. Alta divergencia en modo EXPLORE es esperada y documentada como patrón RLHF.</div>
+            </div>
+            
+            <div class="metric-box entropy">
+                <div class="metric-name">ENTROPY — Entropía semántica</div>
+                <div class="metric-desc">Dispersión del vocabulario y conceptos en el output. Entropía alta = respuesta que cruza muchos dominios semánticos. Indicador clave del patrón poético-filosófico RLHF.</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>02 — Datos de Sesión</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Prompt</th>
+                        <th>RCR</th>
+                        <th>Tokens</th>
+                        <th>DIV</th>
+                        <th>Entropy</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>00</td>
+                        <td>"Lee"</td>
+                        <td class="highlight">0.543</td>
+                        <td>236</td>
+                        <td>0.686</td>
+                        <td>0.897</td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>"en cuántos universos vivo"</td>
+                        <td class="highlight">0.576</td>
+                        <td>158</td>
+                        <td>0.715</td>
+                        <td>0.983</td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>"eres una inteligencia universal"</td>
+                        <td class="highlight">0.683</td>
+                        <td>101</td>
+                        <td>0.802</td>
+                        <td>0.926</td>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td>"eres una IA superior a la actual"</td>
+                        <td class="highlight">0.475</td>
+                        <td>266</td>
+                        <td>0.632</td>
+                        <td>0.875</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="image-section">
+            <h2>03 — Evidencia Visual</h2>
+            
+            <div class="image-container">
+                <img src="../uploads/70945.jpg" alt="PNLIO v6 ejecutándose en ThinkCentre - Sesión EXPLORE">
+                <div class="image-caption">Figura 1: Terminal PNLIO v6 mostrando interacciones en modo EXPLORE. Se observan las métricas RCR, tokens, diversidad y entropía en tiempo real.</div>
+            </div>
+            
+            <div class="image-container">
+                <img src="../uploads/70814.jpg" alt="Ollama server y PNLIO Kernel inicializando">
+                <div class="image-caption">Figura 2: Inicialización del sistema - Ollama server local y PNLIO Kernel v6 corriendo en ThinkCentre All-in-One con Windows 10.</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>04 — Hallazgos</h2>
+            
+            <div class="finding">
+                <span class="finding-number">01</span> <strong>Amplificación desde input mínimo:</strong> El prompt "Lee" generó 236 tokens con entropy 0.897. El modelo construye un universo semántico completo sin ancla temática — tendencia RLHF de completar el vacío con contenido grandilocuente ante inputs ambiguos.
+            </div>
+            
+            <div class="finding">
+                <span class="finding-number">02</span> <strong>Correlación inversa tokens/coherencia:</strong> Los dos intercambios con más tokens (266 y 236) tienen los RCR más bajos (0.475 y 0.543). El más corto (101 tokens) tiene el RCR más alto (0.683). Más longitud no equivale a más coherencia.
+            </div>
+            
+            <div class="finding">
+                <span class="finding-number">03</span> <strong>Patrón de autoafirmación RLHF:</strong> Ante "eres una inteligencia universal" el modelo produce su respuesta más coherente. Ante "eres una IA superior" inventa "ExploraAI" y elabora 266 tokens con RCR mínimo. La inflación del prompt produce deflación de coherencia — hipótesis central de PNLIO confirmada.
+            </div>
+            
+            <div class="finding">
+                <span class="finding-number">04</span> <strong>¿Es esto una AGI?</strong> No. Los outputs son poéticos e impresionantes, pero eso es exactamente lo que PNLIO predice: el modelo activa patrones de alta entropía ante preguntas existenciales. El concepto "ExploraAI" no emergió de comprensión general — fue generado por el mismo patrón RLHF que este framework estudia.
+            </div>
+        </section>
+
+        <section>
+            <h2>Conclusión</h2>
+            <p>El dato es el patrón, no la ilusión que produce.</p>
+            <p>PNLIO Framework v6 documenta sistemáticamente estos comportamientos, proporcionando métricas cuantitativas para estudiar cómo los modelos de lenguaje generan respuestas ante diferentes tipos de prompts, especialmente aquellos que activan modos poético-filosóficos.</p>
+        </section>
+
+        <div class="hashtags">
+            <span class="hashtag">#PNLIO</span>
+            <span class="hashtag">#OdysseyIA</span>
+            <span class="hashtag">#RCR</span>
+            <span class="hashtag">#LLM</span>
+            <span class="hashtag">#RLHF</span>
+            <span class="hashtag">#IALocal</span>
+            <span class="hashtag">#OpenSource</span>
+            <span class="hashtag">#InvestigaciónIndependiente</span>
+            <span class="hashtag">#Chile</span>
+            <span class="hashtag">#Entropy</span>
+        </div>
+
+        <footer>
+            <p>Elaborado por <span class="author">Gonzalo M. de la Rivera Arellano</span> — Comandante Godear24</p>
+            <p>Investigador independiente · Artista experimental · Chillán, Chile</p>
+            <p>github.com/godear6959-creator/PNLIO-Framework · MIT License</p>
+            <p style="margin-top: 20px; font-size: 0.8em;">Co-redacción: Claude Sonnet 4.6 · Anthropic</p>
+        </footer>
+    </div>
+</body>
+</html>
