@@ -54,3 +54,7 @@ Default: `g24` (hash SHA256)
 ## Autor
 
 Gonzalo Mauricio de la Rivera Arellano
+
+---
+
+![PNLIO Motto](motto.png)
